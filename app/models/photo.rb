@@ -1,7 +1,6 @@
 # encoding: UTF-8
 class Photo
   include Mongoid::Document
-  include Mongoid::AutoIncrement
   field :title, type: String
   field :description, type: String
   has_many :attachments, :as => :attachable, dependent: :destroy
