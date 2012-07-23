@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @photo.description %>
+</p>
+<p>
+  <b>Attachments:</b>
+  <ul>
+    <%- @photo.attachments.each do |attachment| -%>
+      <li><%= image_tag attachment.file_url %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>
