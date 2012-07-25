@@ -4,7 +4,6 @@ module Mongoid
 
       included do
         field :_id,  :type => Integer, default: ->{ inc_id }
-        before_create :inc_id
       end
 
       def inc_id
