@@ -12,4 +12,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+tmp/
+log/*.log*
+tmp/**/*
+.sass-cache/
+public/assets/
+config/mongoid.yml
+public/uploads/**/*
+.DS_Store
